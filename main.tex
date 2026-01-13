@@ -1,0 +1,45 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{graphicx} % Пакет для картинок
+
+\geometry{margin=2cm}
+
+\begin{document}
+
+\section*{КР3 }
+
+\subsection*{1) МП-автомат для $(abc)^n(cba)^k(ad)^m(dc)^p:\; n+m=k+p,\; n\ge k$}
+
+\textbf{Краткое обоснование:} стек хранит разность $(n-k)+(m-p)$: на каждом блоке $abc$ и $ad$ делаем push(1), на каждом $cba$ и $dc$ делаем pop(1); условие $n\ge k$ гарантирует, что на этапе $cba$ не потребуется снимать с пустого стека. Принимаем, если стек пуст.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{photo_2026-01-13_16-18-27.jpg} 
+\caption { автоматы делать в латехе очень сложно я не смог посему как есть}
+\end{figure}
+
+\newpage
+\subsection*{2) ДКА для регулярного выражения $a?ba?b^*ab$}
+
+\textbf{Краткое обоснование:} ДКА построен по стандартному алгоритму (через НКА и детерминизацию). Он принимает строки, соответствующие шаблону: необязательное $a$, затем $b$, затем необязательное $a$, любое кол-во $b$, и в конце $ab$.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{photo_2026-01-13_16-18-40.jpg}
+    \caption{аналогично, смог только вручную}
+\end{figure}
+
+\newpage
+\subsection*{3) Регулярное выражение по данному ДКА}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\textwidth]{photo_2026-01-13_16-29-35.jpg}
+    \caption{регулярки тоже непросто в латехе чтобы читаемы были}
+\end{figure}
+
+\end{document}
